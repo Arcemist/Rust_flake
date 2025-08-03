@@ -20,12 +20,15 @@
     in {
       devShells.default = with pkgs; mkShell {
         buildInputs = [
-	  rust-bin.stable."1.48.0".default
+	  rust-bin.stable.latest.default
 	];
 
-	#shellHook = ''
-        #  alias ls = ls -a
-	#''
+        # For convinience
+	# Need fish in normal user enviroment
+	# The "exec" makes it so it does not need to be closed 2 times
+	shellHook = ''
+          exec fish
+	'';
       };
     }
   );
