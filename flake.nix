@@ -30,6 +30,15 @@
           exec fish
 	'';
       };
+
+      # nix develop .#nombre
+      # Makes a dev enviroment that includes what you put here,
+      # in addition to what is in the default option.
+      #devShells.nombre = pkgs.mkShell {
+      #  buildInputs = [
+      #    pkgs.lsd
+      #  ];
+      #};
     }
   );
 }
