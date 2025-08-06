@@ -23,6 +23,10 @@
 	  rust-bin.stable.latest.default
 	];
 
+	#nativeBuildInputs = [
+        #  pkgs.pkg-config
+	#];
+
         # For convinience
 	# Need fish in normal user enviroment
 	# The "exec" makes it so it does not need to be closed 2 times
